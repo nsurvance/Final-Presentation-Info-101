@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ocean World - Visualization</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+    <script src="https://kit.fontawesome.com/bd1924c9a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style-universal.css">
+    <link rel="stylesheet" href="../css/hover.css">
+    <link rel="stylesheet" href="../css/visualization.css">
+</head>
+
+<body>
+
+    <!--===================== HTML Body =====================-->
+
+    <!-- Header Insert -->
+    <span id="java-header-slot"></span>
+
+    <!-- Sidebar Insert -->
+    <span id="java-sidebar-slot"></span>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Top-Bar Insert -->
+        <span id="java-topbar-slot"></span>
+
+        <!--CONTENT HERE -->
+        <!-- Graph -->
+        <section id="graph">
+            <img src="../images/graph.png" alt="Graph" width="1200px" usemap="#Map">
+
+            <div id="info-container">
+
+                <!-- <div id='infoBox'>
+                    <hr />
+                    <span id='close'> <i class='fas fa-times-circle fa-2x'></i> </span>
+                    <h2 id='year-h'>Year</h2>
+                    <p id='year-p'>1957</p>
+                    <h2 id='water-h'>Change in Water Level</h2>
+                    <p id='water-p'>4.291</p>
+                    <h2 id='temp-h'>Change in Global Temperature</h2>
+                    <p id='temp-p'>0.09</p>
+                    <hr />
+                </div> -->
+                <span id="infoBox"></span>
+
+            </div>
+            <br />
+            <span id="notif"> <i class="fas fa-exclamation-circle"></i> The graph is currently unavailable. Please
+                increase the
+                width of your browser.</span>
+            <div class="text">
+                <h2>How do I use this graph?</h2>
+                <p>&emsp;&emsp;&emsp;This graph shows data of the Rise in Water Level (inches) and the increase in the
+                    Global Average Temperature (fahrenheit) between 1901 and 2013. As you can see both the global
+                    average temperatures and sea levels are gradually increasing over the past century.
+                    <br /> <br />
+                    You can view exact values and compare them by selection points on the graph. Hovering over a point
+                    will show it's exact year.</p>
+
+                <i class="fas fa-angle-double-down fa-3x"></i>
+            </div>
+        </section>
+
+        <!-- Mapping Insert -->
+        <span id="mapping-insert"></span>
+
+        <!-- FAQ -->
+        <section class="faq" id="parallax">
+            <h1>FAQ</h1>
+            <div id="questions">
+                <p class="Question">Is the sea level rising now?</p>
+                <p class="Answer">Satellite altimeters are currently (1993-present) measuring a rate of 3.3 mm per year
+                    of global mean sea level rise.</p>
+
+                <p class="Question">How is Antarctica and Greenland affecting the water levels?</p>
+                <p class="Answer">Currently the total sea level rise is about 3 millimeters per year (about 1/8 of an
+                    inch per year). Of that amount, about one-third comes from Greenland and Antarctica, one-third from
+                    glaciers like those in Alaska or the Himalayas, and one-third from the expansion of seawater as it
+                    warms.</p>
+
+                <p class="Question">How does the rising sea levels compare to previous centuries and when did it start
+                    rising?</p>
+                <p class="Answer">Between about 21,000 years and about 11,700 years ago, Earth warmed about 4 degrees C
+                    (7.2 degrees F), and the oceans rose (with a slight lag after the onset of warming) about 85 meters,
+                    or about 280 feet. However, sea levels continued to rise another 45 meters (about 150 feet) after
+                    the warming ended, to a total of 130 meters (from its initial level, before warming began), or about
+                    430 feet, reaching its modern level about 3,000 years ago.</p>
+
+            </div>
+        </section>
+
+        <section id="sources">
+            <h2>Sources</h2>
+            <p>“Climate Change Indicators: U.S. and Global Temperature.” EPA, Environmental Protection Agency, 17
+                Dec.
+                2016, <a
+                    href="https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature">https://www.epa.gov/climate-indicators/climate-change-indicators-us-and-global-temperature</a>.
+            </p>
+            <p>“Climate Change Indicators: Sea Level.” EPA, Environmental Protection Agency, 17 Dec. 2016, <a
+                    href="https://www.epa.gov/climate-indicators/climate-change-indicators-sea-level">https://www.epa.gov/climate-indicators/climate-change-indicators-sea-level</a>.
+            </p>
+
+            <p>“NASA Sea Level Change Portal: FAQ.” NASA, NASA, 5 Oct. 2015, <a
+                    href="https://sealevel.nasa.gov/faq">https://sealevel.nasa.gov/faq</a>.</p>
+        </section>
+    </div>
+
+
+    <!-- Footer Insert-->
+    <span id="java-footer-slot"></span>
+
+
+    <!--===================== Inserts =====================-->
+    <span id="filler"></span>
+
+    <!-- Mapping -->
+    <!-- Chrome Browsers -->
+    <map name="Map">
+        <area shape="rect" id="1901" coords="73,86,78,567" href="#" title="1901">
+        <area shape="rect" id="1902" coords="83,86,88,567" href="#" title="1902">
+        <area shape="rect" id="1903" coords="93,86,98,567" href="#" title="1903">
+        <area shape="rect" id="1904" coords="101,86,106,567" href="#" title="1904">
+        <area shape="rect" id="1905" coords="111,86,116,567" href="#" title="1905">
+        <area shape="rect" id="1906" coords="121,86,126,567" href="#" title="1906">
+        <area shape="rect" id="1907" coords="131,86,136,567" href="#" title="1907">
+        <area shape="rect" id="1908" coords="141,86,146,567" href="#" title="1908">
+        <area shape="rect" id="1909" coords="151,86,156,567" href="#" title="1909">
+        <area shape="rect" id="1910" coords="161,86,166,567" href="#" title="1910">
+        <area shape="rect" id="1911" coords="171,86,176,567" href="#" title="1911">
+        <area shape="rect" id="1912" coords="181,86,186,567" href="#" title="1912">
+        <area shape="rect" id="1913" coords="191,86,196,567" href="#" title="1913">
+        <area shape="rect" id="1914" coords="201,86,206,567" href="#" title="1914">
+        <area shape="rect" id="1915" coords="211,86,216,567" href="#" title="1915">
+        <area shape="rect" id="1916" coords="221,86,226,567" href="#" title="1916">
+        <area shape="rect" id="1917" coords="231,86,236,567" href="#" title="1917">
+        <area shape="rect" id="1918" coords="241,86,246,567" href="#" title="1918">
+        <area shape="rect" id="1919" coords="251,86,256,567" href="#" title="1919">
+        <area shape="rect" id="1920" coords="261,86,266,567" href="#" title="1920">
+        <area shape="rect" id="1921" coords="271,86,276,567" href="#" title="1921">
+        <area shape="rect" id="1922" coords="281,86,286,567" href="#" title="1922">
+        <area shape="rect" id="1923" coords="291,86,296,567" href="#" title="1923">
+        <area shape="rect" id="1924" coords="301,86,306,567" href="#" title="1924">
+        <area shape="rect" id="1925" coords="311,86,316,567" href="#" title="1925">
+        <area shape="rect" id="1926" coords="321,86,326,567" href="#" title="1926">
+        <area shape="rect" id="1927" coords="331,86,336,567" href="#" title="1927">
+        <area shape="rect" id="1928" coords="341,86,346,567" href="#" title="1928">
+        <area shape="rect" id="1929" coords="349,86,354,567" href="#" title="1929">
+        <area shape="rect" id="1930" coords="359,86,364,567" href="#" title="1930">
+        <area shape="rect" id="1931" coords="369,86,374,567" href="#" title="1931">
+        <area shape="rect" id="1932" coords="379,86,384,567" href="#" title="1932">
+        <area shape="rect" id="1933" coords="389,86,394,567" href="#" title="1933">
+        <area shape="rect" id="1934" coords="399,86,404,567" href="#" title="1934">
+        <area shape="rect" id="1935" coords="409,86,414,567" href="#" title="1935">
+        <area shape="rect" id="1936" coords="419,86,424,567" href="#" title="1936">
+        <area shape="rect" id="1937" coords="429,86,434,567" href="#" title="1937">
+        <area shape="rect" id="1938" coords="439,86,444,567" href="#" title="1938">
+        <area shape="rect" id="1939" coords="449,86,454,567" href="#" title="1939">
+        <area shape="rect" id="1940" coords="459,86,464,567" href="#" title="1940">
+        <area shape="rect" id="1941" coords="469,86,474,567" href="#" title="1941">
+        <area shape="rect" id="1942" coords="479,86,484,567" href="#" title="1942">
+        <area shape="rect" id="1943" coords="489,86,494,567" href="#" title="1943">
+        <area shape="rect" id="1944" coords="499,86,504,567" href="#" title="1944">
+        <area shape="rect" id="1945" coords="507,86,512,567" href="#" title="1945">
+        <area shape="rect" id="1946" coords="517,86,522,567" href="#" title="1946">
+        <area shape="rect" id="1947" coords="527,86,532,567" href="#" title="1947">
+        <area shape="rect" id="1948" coords="537,86,542,567" href="#" title="1948">
+        <area shape="rect" id="1949" coords="547,86,552,567" href="#" title="1949">
+        <area shape="rect" id="1950" coords="557,86,562,567" href="#" title="1950">
+        <area shape="rect" id="1951" coords="567,86,572,567" href="#" title="1951">
+        <area shape="rect" id="1952" coords="577,86,582,567" href="#" title="1952">
+        <area shape="rect" id="1953" coords="587,86,592,567" href="#" title="1953">
+        <area shape="rect" id="1954" coords="597,86,602,567" href="#" title="1954">
+        <area shape="rect" id="1955" coords="605,86,610,567" href="#" title="1955">
+        <area shape="rect" id="1956" coords="615,86,620,567" href="#" title="1956">
+        <area shape="rect" id="1957" coords="625,86,630,567" href="#" title="1957">
+        <area shape="rect" id="1958" coords="635,86,640,567" href="#" title="1958">
+        <area shape="rect" id="1959" coords="645,86,650,567" href="#" title="1959">
+        <area shape="rect" id="1960" coords="655,86,660,567" href="#" title="1960">
+        <area shape="rect" id="1961" coords="665,86,670,567" href="#" title="1961">
+        <area shape="rect" id="1962" coords="675,86,680,567" href="#" title="1962">
+        <area shape="rect" id="1963" coords="685,86,690,567" href="#" title="1963">
+        <area shape="rect" id="1964" coords="695,86,700,567" href="#" title="1964">
+        <area shape="rect" id="1965" coords="705,86,710,567" href="#" title="1965">
+        <area shape="rect" id="1966" coords="715,86,720,567" href="#" title="1966">
+        <area shape="rect" id="1967" coords="725,86,730,567" href="#" title="1967">
+        <area shape="rect" id="1968" coords="735,86,740,567" href="#" title="1968">
+        <area shape="rect" id="1969" coords="745,86,750,567" href="#" title="1969">
+        <area shape="rect" id="1970" coords="755,86,760,567" href="#" title="1970">
+        <area shape="rect" id="1971" coords="765,86,770,567" href="#" title="1971">
+        <area shape="rect" id="1972" coords="775,86,780,567" href="#" title="1972">
+        <area shape="rect" id="1973" coords="785,86,790,567" href="#" title="1973">
+        <area shape="rect" id="1974" coords="795,86,800,567" href="#" title="1974">
+        <area shape="rect" id="1975" coords="805,86,810,567" href="#" title="1975">
+        <area shape="rect" id="1976" coords="815,86,820,567" href="#" title="1976">
+        <area shape="rect" id="1977" coords="825,86,830,567" href="#" title="1977">
+        <area shape="rect" id="1978" coords="835,86,840,567" href="#" title="1978">
+        <area shape="rect" id="1979" coords="843,86,848,567" href="#" title="1979">
+        <area shape="rect" id="1980" coords="853,86,858,567" href="#" title="1980">
+        <area shape="rect" id="1981" coords="863,86,868,567" href="#" title="1981">
+        <area shape="rect" id="1982" coords="873,86,878,567" href="#" title="1982">
+        <area shape="rect" id="1983" coords="883,86,888,567" href="#" title="1983">
+        <area shape="rect" id="1984" coords="893,86,898,567" href="#" title="1984">
+        <area shape="rect" id="1985" coords="903,86,908,567" href="#" title="1985">
+        <area shape="rect" id="1986" coords="913,86,918,567" href="#" title="1986">
+        <area shape="rect" id="1987" coords="923,86,928,567" href="#" title="1987">
+        <area shape="rect" id="1988" coords="933,86,938,567" href="#" title="1988">
+        <area shape="rect" id="1989" coords="943,86,948,567" href="#" title="1989">
+        <area shape="rect" id="1990" coords="953,86,958,567" href="#" title="1990">
+        <area shape="rect" id="1991" coords="963,86,968,567" href="#" title="1991">
+        <area shape="rect" id="1992" coords="973,86,978,567" href="#" title="1992">
+        <area shape="rect" id="1993" coords="983,86,988,567" href="#" title="1993">
+        <area shape="rect" id="1994" coords="991,86,996,567" href="#" title="1994">
+        <area shape="rect" id="1995" coords="1001,86,1006,567" href="#" title="1995">
+        <area shape="rect" id="1996" coords="1011,86,1016,567" href="#" title="1996">
+        <area shape="rect" id="1997" coords="1021,86,1026,567" href="#" title="1997">
+        <area shape="rect" id="1998" coords="1031,86,1036,567" href="#" title="1998">
+        <area shape="rect" id="1999" coords="1041,86,1046,567" href="#" title="1999">
+        <area shape="rect" id="2000" coords="1051,86,1056,567" href="#" title="2000">
+        <area shape="rect" id="2001" coords="1061,86,1066,567" href="#" title="2001">
+        <area shape="rect" id="2002" coords="1071,86,1076,567" href="#" title="2002">
+        <area shape="rect" id="2003" coords="1081,86,1086,567" href="#" title="2003">
+        <area shape="rect" id="2004" coords="1091,86,1096,567" href="#" title="2004">
+        <area shape="rect" id="2005" coords="1101,86,1106,567" href="#" title="2005">
+        <area shape="rect" id="2006" coords="1111,86,1116,567" href="#" title="2006">
+        <area shape="rect" id="2007" coords="1121,86,1126,567" href="#" title="2007">
+        <area shape="rect" id="2008" coords="1131,86,1136,567" href="#" title="2008">
+        <area shape="rect" id="2009" coords="1141,86,1146,567" href="#" title="2009">
+        <area shape="rect" id="2010" coords="1151,86,1156,567" href="#" title="2010">
+        <area shape="rect" id="2011" coords="1161,86,1166,567" href="#" title="2011">
+        <area shape="rect" id="2012" coords="1171,86,1176,567" href="#" title="2012">
+        <area shape="rect" id="2013" coords="1181,86,1186,567" href="#" title="2013">
+    </map>
+
+    <!-- Not Chrome Broswers -->
+    <!-- <map name="Map">
+            <area shape="rect" id="1901" coords="58,86,53,567" href="#" title="1901">
+            <area shape="rect" id="1902" coords="63,86,68,567" href="#" title="19">
+            <area shape="rect" id="1903" coords="73,86,78,567" href="#" title="19">
+            <area shape="rect" id="1904" coords="83,86,88,567" href="#" title="19">
+            <area shape="rect" id="1905" coords="93,86,98,567" href="#" title="19">
+            <area shape="rect" id="1906" coords="101,86,106,567" href="#" title="19">
+            <area shape="rect" id="1907" coords="111,86,116,567" href="#" title="19">
+            <area shape="rect" id="1908" coords="121,86,126,567" href="#" title="19">
+            <area shape="rect" id="1909" coords="131,86,136,567" href="#" title="19">
+            <area shape="rect" id="1910" coords="141,86,146,567" href="#" title="19">
+            <area shape="rect" id="1911" coords="151,86,156,567" href="#" title="19">
+            <area shape="rect" id="1912" coords="161,86,166,567" href="#" title="19">
+            <area shape="rect" id="1913" coords="171,86,176,567" href="#" title="19">
+            <area shape="rect" id="1914" coords="181,86,186,567" href="#" title="19">
+            <area shape="rect" id="1915" coords="191,86,196,567" href="#" title="19">
+            <area shape="rect" id="1916" coords="201,86,206,567" href="#" title="19">
+            <area shape="rect" id="1917" coords="211,86,216,567" href="#" title="19">
+            <area shape="rect" id="1918" coords="221,86,226,567" href="#" title="19">
+            <area shape="rect" id="1919" coords="231,86,236,567" href="#" title="19">
+            <area shape="rect" id="1920" coords="241,86,246,567" href="#" title="19">
+            <area shape="rect" id="1921" coords="251,86,256,567" href="#" title="19">
+            <area shape="rect" id="1922" coords="261,86,266,567" href="#" title="19">
+            <area shape="rect" id="1923" coords="271,86,276,567" href="#" title="19">
+            <area shape="rect" id="1924" coords="281,86,286,567" href="#" title="19">
+            <area shape="rect" id="1925" coords="291,86,296,567" href="#" title="19">
+            <area shape="rect" id="1926" coords="301,86,306,567" href="#" title="19">
+            <area shape="rect" id="1927" coords="311,86,316,567" href="#" title="19">
+            <area shape="rect" id="1928" coords="321,86,326,567" href="#" title="19">
+            <area shape="rect" id="1929" coords="331,86,336,567" href="#" title="19">
+            <area shape="rect" id="1930" coords="341,86,346,567" href="#" title="19">
+            <area shape="rect" id="1931" coords="349,86,354,567" href="#" title="19">
+            <area shape="rect" id="1932" coords="359,86,364,567" href="#" title="19">
+            <area shape="rect" id="1933" coords="369,86,374,567" href="#" title="19">
+            <area shape="rect" id="1934" coords="379,86,384,567" href="#" title="19">
+            <area shape="rect" id="1935" coords="389,86,394,567" href="#" title="19">
+            <area shape="rect" id="1936" coords="399,86,404,567" href="#" title="19">
+            <area shape="rect" id="1937" coords="409,86,414,567" href="#" title="19">
+            <area shape="rect" id="1938" coords="419,86,424,567" href="#" title="19">
+            <area shape="rect" id="1939" coords="429,86,434,567" href="#" title="19">
+            <area shape="rect" id="1940" coords="439,86,444,567" href="#" title="19">
+            <area shape="rect" id="1941" coords="449,86,454,567" href="#" title="19">
+            <area shape="rect" id="1942" coords="459,86,464,567" href="#" title="19">
+            <area shape="rect" id="1943" coords="469,86,474,567" href="#" title="19">
+            <area shape="rect" id="1944" coords="479,86,484,567" href="#" title="19">
+            <area shape="rect" id="1945" coords="489,86,494,567" href="#" title="19">
+            <area shape="rect" id="1946" coords="499,86,504,567" href="#" title="19">
+            <area shape="rect" id="1947" coords="507,86,512,567" href="#" title="19">
+            <area shape="rect" id="1948" coords="517,86,522,567" href="#" title="19">
+            <area shape="rect" id="1949" coords="527,86,532,567" href="#" title="19">
+            <area shape="rect" id="1950" coords="537,86,542,567" href="#" title="19">
+            <area shape="rect" id="1951" coords="547,86,552,567" href="#" title="19">
+            <area shape="rect" id="1952" coords="557,86,562,567" href="#" title="19">
+            <area shape="rect" id="1953" coords="567,86,572,567" href="#" title="19">
+            <area shape="rect" id="1954" coords="577,86,582,567" href="#" title="19">
+            <area shape="rect" id="1955" coords="587,86,592,567" href="#" title="19">
+            <area shape="rect" id="1956" coords="597,86,602,567" href="#" title="19">
+            <area shape="rect" id="1957" coords="605,86,610,567" href="#" title="19">
+            <area shape="rect" id="1958" coords="615,86,620,567" href="#" title="19">
+            <area shape="rect" id="1959" coords="625,86,630,567" href="#" title="19">
+            <area shape="rect" id="1960" coords="635,86,640,567" href="#" title="19">
+            <area shape="rect" id="1961" coords="645,86,650,567" href="#" title="19">
+            <area shape="rect" id="1962" coords="655,86,660,567" href="#" title="19">
+            <area shape="rect" id="1963" coords="665,86,670,567" href="#" title="19">
+            <area shape="rect" id="1964" coords="675,86,680,567" href="#" title="19">
+            <area shape="rect" id="1965" coords="685,86,690,567" href="#" title="19">
+            <area shape="rect" id="1966" coords="695,86,700,567" href="#" title="19">
+            <area shape="rect" id="1967" coords="705,86,710,567" href="#" title="19">
+            <area shape="rect" id="1968" coords="715,86,720,567" href="#" title="19">
+            <area shape="rect" id="1969" coords="725,86,730,567" href="#" title="19">
+            <area shape="rect" id="1970" coords="735,86,740,567" href="#" title="19">
+            <area shape="rect" id="1971" coords="745,86,750,567" href="#" title="19">
+            <area shape="rect" id="1972" coords="755,86,760,567" href="#" title="19">
+            <area shape="rect" id="1973" coords="765,86,770,567" href="#" title="19">
+            <area shape="rect" id="1974" coords="775,86,780,567" href="#" title="19">
+            <area shape="rect" id="1975" coords="785,86,790,567" href="#" title="19">
+            <area shape="rect" id="1976" coords="795,86,800,567" href="#" title="19">
+            <area shape="rect" id="1977" coords="805,86,810,567" href="#" title="19">
+            <area shape="rect" id="1978" coords="815,86,820,567" href="#" title="19">
+            <area shape="rect" id="1979" coords="825,86,830,567" href="#" title="19">
+            <area shape="rect" id="1980" coords="835,86,840,567" href="#" title="19">
+            <area shape="rect" id="1981" coords="843,86,848,567" href="#" title="19">
+            <area shape="rect" id="1982" coords="853,86,858,567" href="#" title="19">
+            <area shape="rect" id="1983" coords="863,86,868,567" href="#" title="19">
+            <area shape="rect" id="1984" coords="873,86,878,567" href="#" title="19">
+            <area shape="rect" id="1985" coords="883,86,888,567" href="#" title="19">
+            <area shape="rect" id="1986" coords="893,86,898,567" href="#" title="19">
+            <area shape="rect" id="1987" coords="903,86,908,567" href="#" title="19">
+            <area shape="rect" id="1988" coords="913,86,918,567" href="#" title="19">
+            <area shape="rect" id="1989" coords="923,86,928,567" href="#" title="19">
+            <area shape="rect" id="1990" coords="933,86,938,567" href="#" title="19">
+            <area shape="rect" id="1991" coords="943,86,948,567" href="#" title="19">
+            <area shape="rect" id="1992" coords="953,86,958,567" href="#" title="19">
+            <area shape="rect" id="1993" coords="963,86,968,567" href="#" title="19">
+            <area shape="rect" id="1994" coords="973,86,978,567" href="#" title="19">
+            <area shape="rect" id="1995" coords="983,86,988,567" href="#" title="19">
+            <area shape="rect" id="1996" coords="991,86,996,567" href="#" title="19">
+            <area shape="rect" id="1997" coords="1001,86,1006,567" href="#" title="19">
+            <area shape="rect" id="1998" coords="1011,86,1016,567" href="#" title="19">
+            <area shape="rect" id="1999" coords="1021,86,1026,567" href="#" title="19">
+            <area shape="rect" id="2000" coords="1031,86,1036,567" href="#" title="2000">
+            <area shape="rect" id="2001" coords="1041,86,1046,567" href="#" title="2001">
+            <area shape="rect" id="2002" coords="1051,86,1056,567" href="#" title="2002">
+            <area shape="rect" id="2003" coords="1061,86,1066,567" href="#" title="2003">
+            <area shape="rect" id="2004" coords="1071,86,1076,567" href="#" title="2004">
+            <area shape="rect" id="2005" coords="1081,86,1086,567" href="#" title="2005">
+            <area shape="rect" id="2006" coords="1091,86,1096,567" href="#" title="2006">
+            <area shape="rect" id="2007" coords="1101,86,1106,567" href="#" title="2007">
+            <area shape="rect" id="2008" coords="1111,86,1116,567" href="#" title="2008">
+            <area shape="rect" id="2009" coords="1121,86,1126,567" href="#" title="2008">
+            <area shape="rect" id="2010" coords="1131,86,1136,567" href="#" title="2009">
+            <area shape="rect" id="2011" coords="1141,86,1146,567" href="#" title="2010">
+            <area shape="rect" id="2012" coords="1151,86,1156,567" href="#" title="2011">
+            <area shape="rect" id="2013" coords="1161,86,1166,567" href="#" title="2013">
+        </map> -->
+
+    <!-- Footer -->
+    <script type="text/html" id="java-footer">
+            <section id="footer">
+                <table>
+                    <ul>
+                        <li id="disclaimer">Contact us through email.  Created for IUPUI 2019 &copy;</li>
+                        <li>
+                            <a href="mailto:bushcom@iu.edu">
+                                <span id="colin" class="foot-item">
+                                    <span class="tooltip">Colin</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:cah1@iu.edu">
+                                <span id="clark" class="foot-item">
+                                    <span class="tooltip">Clark</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gmbeckha@iu.edu">
+                                <span id="griffin" class="foot-item">
+                                    <span class="tooltip">Griffin</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:nsurvanc@iu.edu">
+                                <span id="nathan" class="foot-item">
+                                    <span class="tooltip">Nathan</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:jdatwell@iu.edu">
+                                <span id="james" class="foot-item">
+                                    <span class="tooltip">James</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </table>
+            </section>
+            </script>
+
+    <!-- Side Bar -->
+    <script type="text/html" id="java-sidebar">
+            <div ID="sidebar">
+                <!-- Side Menu -->
+                <ul ID="side-menu">
+                     <li class="item"><a href="description.html">Description</a></li>
+                    <li class="item"><a href="visualization.html">Visualization</a></li>
+                    <li class="item"><a href="../Final Group Project 2_0/About.html">About Us</a></li>
+                </ul>
+        
+                <!-- Side Footer -->
+                <ul ID="side-footer">
+                        <li>
+                    <a href="mailto:bushcom@iu.edu">
+                        <span id="colin-s" class="foot-item">
+                            <span class="tooltip">Colin</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:cah1@iu.edu">
+                        <span id="clark-s" class="foot-item">
+                            <span class="tooltip">Clark</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:gmbeckha@iu.edu">
+                        <span id="griffin-s" class="foot-item">
+                            <span class="tooltip">Griffin</span>
+                        </span>
+                    </a>
+                </li>
+                <li><span id="filler"></span></li>
+                <li>
+                    <a href="mailto:nsurvanc@iu.edu">
+                        <span id="nathan-s" class="foot-item">
+                            <span class="tooltip">Nathan</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:jdatwell@iu.edu">
+                        <span id="james-s" class="foot-item">
+                            <span class="tooltip">James</span>
+                        </span>
+                    </a>
+                </li>
+                <li id="disclaimer-s">Contact us through email.  Created for IUPUI 2019 &copy;</li>
+                </ul>
+            </div>
+        </script>
+
+    <script type="text/html" id="java-topbar">
+            <div id="topbar">
+                <a href="../index.html" id="logo"><img src="../images/logo.png" alt="Ocean World" class="hvr-float"></a>
+    
+                <!-- Hamburger Button -->
+                <button type="button" id="toggle-collapse" onClick="toggleSidebar()" class="hvr-grow">
+                    <ul id="toggle-icon">
+                        <li><span class="toggle-bar"></span></li>
+                        <li><span class="toggle-bar"></span></li>
+                        <li><span class="toggle-bar"></span></li>
+                    </ul>
+                </button>
+            </div>
+        </script>
+
+    <!-- Header -->
+    <script type="text/html" id="java-header">
+            <section id="header">
+                <a href="../index.html" id="logo"><img src="../images/logo.png" alt="Ocean World" class="hvr-float"></a>
+                <ul>
+                    <li class="item hvr-float" id="description"><a href="description.html">Description</a></li>
+                    <li class="item hvr-float" id="visualization"><a href="visualization.html">Visualization</a></li>
+                    <li class="item hvr-float" id="about"><a href="../Final Group Project 2_0/About.html">About Us</a></li>
+                </ul>
+            </section>
+        </script>
+
+    <!--===================== JavaScript =====================-->
+    <script src="../javascript/sidebar-universal.js"></script>
+    <script src="../javascript/parallax.js"></script>
+    <script src="../javascript/datapoints.js"></script>
+    <!-- <script>
+        document.getElementById("1901").addEventListener("click", function () {
+            document.getElementById("infoBox").innerHTML = "<div id='infoBox'> <hr/> <span id='close'> <i class='fas fa-times-circle fa-2x'></i> </span> <h2 id='year-h'>Year</h2> <p id='year-p'>a</p> <h2 id='water-h'>Change in Water Level</h2> <p id='water-p'>b</p> <h2 id='temp-h'>Change in Global Temperature</h2> <p id='temp-p'>c</p> <hr /> </div>";
+
+            document.getElementById("close").addEventListener("click", function () {
+                document.getElementById("infoBox").innerHTML = "<span id='infobox'></span>";
+            });
+        });
+
+        document.getElementById("1902").addEventListener("click", function () {
+            document.getElementById("infoBox").innerHTML = "<div id='infoBox'> <hr/> <span id='close'> <i class='fas fa-times-circle fa-2x'></i> </span> <h2 id='year-h'>Year</h2> <p id='year-p'>x</p> <h2 id='water-h'>Change in Water Level</h2> <p id='water-p'>y</p> <h2 id='temp-h'>Change in Global Temperature</h2> <p id='temp-p'>z</p> <hr /> </div>";
+
+            document.getElementById("close").addEventListener("click", function () {
+                document.getElementById("infoBox").innerHTML = "<span id='infobox'></span>";
+            });
+        });
+    </script> -->
+    <!-- <script src="../javascript/datapoints.js"></script> -->
+    <!-- <script src="../javascript/scrollcolor.js"></script> -->
+</body>
+
+</html>

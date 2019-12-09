@@ -1,0 +1,103 @@
+/* ========================================================== CSS Variables ========================================================== */
+:root { /* Color Variables */
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --accent: rgba(176,255,247,0.44);
+    --solidAccent: rgb(215, 255, 251);
+}
+
+
+/* ========================================================== About Us Section ========================================================== */
+.about-us { /* Centers and Grids content */
+    text-align: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "header header"
+        "Clark Colin"
+        "Nathan Griffin"
+        "James IUPUI";
+}
+
+.about-us h2 { /* pads and defines grid area */
+    padding-bottom: 10px;
+    grid-area: header;
+}
+
+.about-us img { /* sizes and shapes user images */
+    width: 150px;
+    border: hidden;
+    border-radius: 100px
+}
+
+.about-us p { /* alines descriptions and pads */
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.about-us div.box{ /* Shapes the boxes of each individual */
+    border: hidden;
+    border-radius: 10px;
+    padding: 20px 30px 0px 30px;
+    background-color: var(--solidAccent);
+    box-shadow: var(--shadow);
+}
+
+#IUPUI a { /* Creates button for IUPUI box */
+    background: rgb(149,31,24);
+    border: solid white;
+    border-radius: 30px;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+#IUPUI a:hover{ /* Changes button color when hovered over */
+    color:  rgb(149,31,24);
+    background-color: white;
+}
+
+#Clark { /* Places in Grid */
+    grid-area:Clark;
+}
+
+#Colin{ /* Places in Grid */
+    grid-area:Colin;
+}
+
+#Nathan{ /* Places in Grid */
+    grid-area:Nathan;
+}
+
+#Griffin{ /* Places in Grid */
+    grid-area:Griffin;
+}
+
+#James{ /* Places in Grid */
+    grid-area:James;
+}
+
+#IUPUI{ /* Places in Grid and adds background color */
+    grid-area:IUPUI;
+    background-color: rgb(149,31,24);
+    color: white;
+}
+
+
+/* ========================================================== Media Queries ========================================================== */
+@media(max-width: 800px) {
+    .about-us{ /* re orders the grid if web page is below 800 pixels wide */
+        grid-template-areas:
+        "header"
+        "Clark"
+        "Colin"
+        "Nathan"
+        "Griffin"
+        "James"
+        "IUPUI";
+    }
+}

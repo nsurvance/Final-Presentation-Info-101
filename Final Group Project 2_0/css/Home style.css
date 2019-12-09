@@ -1,0 +1,98 @@
+/* ========================================================== CSS Variables ========================================================== */
+:root { /* Color Variables */
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --accent: rgba(176,255,247,0.44);
+    --solidAccent: rgb(215, 255, 251);
+}
+
+
+
+/* ========================================================== Presentation ========================================================== */
+/*.slideshow{
+    width: 960px;
+    height: 400px;
+    overflow: hidden;
+    margin:0 auto;
+}
+
+.slideshow img {
+    max-width: 960px;
+    width: 960px%;
+}
+
+.slideshow .slide-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slideshow .slide-nav .bar {
+display: block;
+background-color:green;
+width: 10px;
+height: 10px;
+border: 2px solid white;
+border-radius: 10px;
+margin: 10px;
+position: relative;
+top: -330px;
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}*/
+
+
+/* ========================================================== Informational Video ========================================================== */
+.info-vid { /* defines the grid of the informational video elements */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "header header"
+        "video desc";
+}
+
+.info-vid h2{ /* Assigns ID in the grid and centers the header */
+    grid-area: header;
+    justify-self: center;
+}
+
+.info-vid iframe{ /* Assigns ID in the grid */
+    grid-area: video;
+}
+
+.info-vid p{ /* Assigns ID in the grid and changes font size */
+    grid-area: desc;
+    font-size: 1.3rem;
+    line-height: 1.5em
+}
+    
+
+
+/* ========================================================== Media Queries ========================================================== */
+@media(max-width: 800px){ /* if the page is less than 800px */
+    .info-vid{ /* Stacks the informational video elements */
+        grid-template-areas: 
+        "header"
+        "video"
+        "desc";
+    }
+    .info-vid iframe{ /* Centers the video */
+        justify-self: center;
+    }
+}
+
+@media(max-width: 530px){ /* if the page is less than 530 pixels */
+    .slide-show { /* assigns a static width to the slideshow and centers it */
+        width: 450px;
+        justify-self: center;
+    }
+
+    .info-vid iframe{ /* assigns a static aspect ratio to the video */
+        width: 450px;
+        height: 253.125px;
+    }
+}

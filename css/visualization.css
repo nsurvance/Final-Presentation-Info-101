@@ -1,0 +1,210 @@
+/* ======================================== Variables ======================================== */
+:root {
+    --background: rgb(30, 35, 68);
+    --shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* ======================================== Graph ======================================== */
+#graph {
+    text-align: center;
+    background-color: rgb(22, 19, 36);
+}
+
+#graph #notif {
+    display: none;
+}
+
+#graph img {
+    padding: 20px;
+}
+
+#graph #info-container {
+    color: white;
+    width: 1200px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+#graph .text {
+    color: white;
+    background-color: var(--background);
+}
+#graph .text h2{
+    padding-top: 60px;
+    font-size: 30px;
+}
+#graph .text p{
+    text-align: left;
+    padding:2% 50px 2% 50px;
+    max-width: 900px;
+    margin:0 auto;
+    font-size: 20px;
+}
+.fa-angle-double-down{
+    display:block;
+    background-color: var(--background);
+    padding:10px;
+    padding-bottom: 90px;
+    color:white;
+}
+
+.text p {
+    line-height: 2em;
+}
+
+@media(max-width: 1250px){
+    #graph img {
+        display: none;
+    }
+
+    map {
+        display: none;
+    }
+
+    #infoBox {
+        display:none;
+    }
+
+    #graph #notif {
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(255, 86, 86);
+    color: #fff;
+    max-width: 12500px;
+    padding: 20px;
+    border: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    }
+}
+
+
+
+/* ======================================== FAQ ======================================== */
+.faq {
+    text-align: center;
+    background: url(../images/parallax2.jpg) no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    margin:0;
+    box-shadow: var(--shadow);
+}
+
+.faq h1{
+    font-size: 72px;
+    color: white;
+    padding: 40px;
+}
+
+.faq #questions {
+    /* background-color: rgb(48, 48, 102); */
+    display:block;
+    background-color: rgba(19, 17, 36, 0.92);
+    max-width: 900px;
+    padding: 0px 40px 40px 40px;
+    margin: 0 auto;
+    box-shadow: var(--shadow);
+}
+
+.faq p {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+.faq p.Question {
+font-weight: 600;
+padding-top: 50px;
+}
+
+.faq p.Answer {
+    padding-top: 0px;
+    font-size: 15px;
+}
+
+
+
+/* ======================================== Sources ======================================== */
+#sources {
+    background-color: rgb(22, 19, 36);
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+#sources h2 {
+    padding-bottom: 20px;
+}
+
+#sources p {
+    max-width: 400px;
+    text-align: left;
+    margin:0 auto;
+    padding: 20px;
+}
+
+#sources a {
+    /* text-decoration: none; */
+    color: #fff;
+}
+#sources a:hover {
+    color: lightslategray;
+    text-decoration: underline;
+}
+
+div#infoBox {
+    display:grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "year-h water-h temp-h close"
+        "year-p water-p temp-p close";
+    /* width: 100%; */
+    background: #fff;
+    color: black;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+div#infoBox #year-h {
+    grid-area: year-h;
+}
+
+div#infoBox #year-p {
+    grid-area: year-p;
+}
+
+div#infoBox #water-h {
+    grid-area: water-h;
+}
+
+div#infoBox #water-p {
+    grid-area: water-p;
+}
+
+div#infoBox #temp-p {
+    grid-area: temp-p;
+}
+
+div#infoBox #close {
+    grid-area: close;
+    position: relative;
+    top: 20px;
+}
+
+.fa-times-circle{
+    transition: 0.3s;
+}
+.fa-times-circle:hover{
+    color: red;
+    transition: 0.3s;
+}

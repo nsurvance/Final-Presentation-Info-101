@@ -1,0 +1,229 @@
+/* ========================================================== CSS Variables ========================================================== */
+:root { /* Color Variables */
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --accent: rgba(176,255,247,0.44);
+    --solidAccent: rgb(215, 255, 251);
+}
+
+
+/* ========================================================== HTML ========================================================== */
+html { /* "box-sizing"=??? Changes the font of the entire HTML document */
+	box-sizing: boarder-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body { /* Removes default margins from around the page */
+    margin:0;
+}
+
+
+/* ========================================================== Heading Image ========================================================== */
+.banner { /* Allows the banner container to take up it's entire space on the page */
+	width: 100%;
+    display: block;
+}
+
+.banner .banner-image { /* Let's the image fill up it's entire container */
+	width: 100%;
+	display: block;
+}
+
+
+/* ========================================================== Navigation Bar ========================================================== */
+.nav-bar{ /* Places the navigation bar at the top of the page and let's it move with the page */
+    position: sticky;
+	top: 0;
+	float:none;
+	background: white;
+	z-index: 3;
+    border-bottom:solid;
+    padding: 0.05rem 1rem;
+    box-shadow: 0 5px 20px black;
+}
+
+.nav-bar ul { /* Breaks down the navigation bar's list format into a side-by-side format with spacing */
+    display: grid;
+    grid-gap: 20px;
+    padding: 10px;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-bar a { /* Creates the button background around the links in the list */
+    background: var(--accent);
+    border: hidden;
+    border-radius: 30px;
+    display: block;
+    text-decoration: none;
+    padding: 1.2rem;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.nav-bar a:hover { /* Changes the button to white when it's hovered over */
+    color: rgba(76,76,76,1.00);
+    background-color: white;
+}
+
+
+/* ========================================================== Side-bar ========================================================== */
+* { /* ??? removes some kind of padding/margins */
+	margin:0px;
+	padding:0px;
+}
+
+#sidebar { /* Adds the sidebar to the screen and moves it into negative space off the screen */
+	position:fixed;
+	width:403px;
+	height:100%;
+	background: white;
+	left:-405px;
+	transition: all 100ms linear;
+	z-index: 4;
+	border-right:solid;
+}
+
+#sidebar.active { /* Moves the sidebar out of negative space when it's activated */
+	left:0px;
+}
+
+#sidebar ul { /* Adds extra padding to the top of the side menu buttons to make it uniform */
+    padding-top: 20px;
+}
+
+#sidebar ul li { /* Removes special "list-padding" from the side bar menu, to allow them to appear as buttons */
+    list-style:none;
+    padding:0px 0px;
+}
+
+#sidebar .toggle-button { /* Places the side bar toggle button in the top left corner */
+	position:absolute;
+	left:420px;
+	top:10px;
+}
+
+#sidebar .toggle-button span { /* Creates the "Hamburger Button" for the Side Menu */
+	display:block;
+	width:30px;
+	height:5px;
+	background:rgb(0,0,0);
+	margin:5px 0px;
+}
+
+#topbar{ /* Creates the blue bar at the top of the mobile menu */
+	display: block;
+	width: 100%;
+	height: 55px;
+	background-color: rgb(210, 255, 251);
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	border-bottom:solid;
+    box-shadow: 0 5px 20px black;;
+}
+
+#sidebar .banner{ /* Adds a matching border to the banner image in the side bar */
+    border-bottom:solid;
+}
+
+
+/* ========================================================== wrapper ========================================================== */
+.background-img { /* Adds the background image to the body section with a matching color. */
+    background-image: url(../images/graphic.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-color: #01708e;
+}
+
+.wrapper { /* Formats the body of each webpage into a grid with 20px spacing, a white background, padding, and centering it. */
+    display:grid;
+    grid-gap: 20px;
+    margin: 0px 50px;
+    background:white;
+    padding:1.4rem;
+    padding-top:30px;
+    padding-bottom:30px;
+    max-width: 1000px;
+    min-width: 400px;
+    justify-content: center;
+    margin:0 auto;
+}
+
+
+/* ========================================================== Footer ========================================================== */
+#footer { /* Adds background color and padding to the footer */
+    background-color: var(--solidAccent);
+    padding: 1.3rem 1.3rem;
+    padding-bottom: 140px;
+    box-shadow: 0 5px 20px black;
+}
+
+#footer ul { /* removes default styling from the footer list */
+    list-style: none;
+    padding:0;
+}
+
+#footer ul li { /* spaces out the list contents */
+    padding: 4px;
+}
+
+#footer a { /* Makes the list links blue with no underlines */
+    text-decoration: none;
+    color: blue;
+}
+
+#footer a:hover { /* The links are only underlined when hovered over */
+    text-decoration: underline;
+}
+
+#footer div { /* 
+    creates a grid out of the sections inside the divider inside the footer ID */
+    display: grid;
+    grid-gap: 5%;
+    grid-template-areas:
+    "Pages Contacts Description Test";
+    text-align: center;
+    justify-content: center;
+    padding:0px;
+}
+
+#footer div #Other-Pages { /* assigns grid space */
+    grid-area:Pages;
+}
+
+#footer div #Contact-Us { /* assigns grid space */
+    grid-area:Contacts;
+}
+
+#footer div #Description { /* assigns grid space */
+    grid-area:Descirption;
+    max-width: 200px;
+}
+
+#footer div #Test{ /* assigns grid space */
+    grid-area: Test;
+    max-width: 200px;
+}
+
+/* ========================================================== Media Queries ========================================================== */
+@media (max-width: 800px) { /* If the page is 800 pixels or smaller */
+    .nav-bar ul {  /* Turns the nav bar from 4 wide to 4 tall */
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .nav-bar { /* Removes formatting that doesn't apply to the mobile width */
+        border: none;
+        box-shadow: none;
+    }    
+
+    #footer div { /* Rearranges grid */
+        grid-template-areas:
+    "Pages Description"
+    "Contacts  Test";
+    grid-gap:20px;
+    }
+}

@@ -1,0 +1,36 @@
+/* ========================================================== CSS Variables ========================================================== */
+:root { /* Color Variables */
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --accent: rgba(176,255,247,0.44);
+    --solidAccent: rgb(215, 255, 251);
+}
+
+
+/* ========================================================== Essay Section ========================================================== */
+.essay { /* Aligns text in the center */
+    text-align: center;
+}
+
+.essay h2 { /* adds padding to the header */
+    padding-bottom: 30px;
+}
+
+.essay p { /* sets the paragraph to justify, increases font size, and 1.5 line spacing */
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.essay img { /* Pads image and defines width */
+    width: 40%;
+    padding: 20px 20px;
+    min-width: 400px;
+}
+
+.essay .float-L { /* floats image */
+    float: left;
+}
+
+.essay .float-R { /* floats image */
+    float: right;
+}

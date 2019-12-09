@@ -1,0 +1,54 @@
+/* ========================================================== CSS Variables ========================================================== */
+:root { /* Color Variables */
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --accent: rgba(176,255,247,0.44);
+    --solidAccent: rgb(215, 255, 251);
+}
+
+
+/* ========================================================== Graph and Graph Description ========================================================== */
+.graph { /* aligns all the contents in the center */
+width: 100%;
+text-align: center;
+}
+
+.graph img{ /* Makes the graph 70% of the pade at a minimum of 400px */
+width: 70%;
+min-width: 400px;
+padding-bottom: 20px;
+}
+
+.graph p{ /* Re-aligns the paragraph elements to the left, */
+text-align: left;
+padding-bottom: 20px;
+line-height: 1.5em;
+}
+
+
+/* ========================================================== FAQ Section ========================================================== */
+.faq { /* aligns FAG section to center and adds hidden border */
+    width:100%;
+    background-color: var(--accent);
+    text-align: center;
+    border: hidden;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.faq h2 { /* pads out the header */
+    padding: 20px;
+}
+
+.faq p { /* pads out the paragraphs and re-aligns to the left */
+    padding: 7px 30px;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.faq p.question { /* Makes the questions bold */
+    font-weight: 600;
+}
+
+.faq p.answer { /* spaces out each question */
+    padding-bottom: 50px;
+}
