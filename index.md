@@ -111,7 +111,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="mailto:jdatwell@iu.edu">
+                        <a href="mailto:">
                             <span id="james" class="foot-item">
                                 <span class="tooltip">James</span>
                             </span>
@@ -139,7 +139,7 @@
             <ul>
                 <li class="item hvr-float" id="description"><a href="html/description.html">Description</a></li>
                 <li class="item hvr-float" id="visualization"><a href="html/visualization.html">Visualization</a></li>
-                <li class="item hvr-float" id="About"><a href="Final Group Project 2_0/About.html">About Us</a></li>
+                <li class="item hvr-float" id="About"><a href="html/about.html">About Us</a></li>
             </ul>
         </section>
     </script>
@@ -151,7 +151,7 @@
             <ul ID="side-menu">
                 <li class="item"><a href="html/description.html">Description</a></li>
                 <li class="item"><a href="html/visualization.html">Visualization</a></li>
-                <li class="item"><a href="Final Group Project 2_0/About.html">About Us</a></li>
+                <li class="item"><a href="html/about.html">About Us</a></li>
             </ul>
 
             <!-- Side Footer -->
@@ -186,7 +186,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:jdatwell@iu.edu">
+                    <a href="mailto:">
                         <span id="james-s" class="foot-item">
                             <span class="tooltip">James</span>
                         </span>

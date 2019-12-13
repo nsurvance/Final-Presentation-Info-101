@@ -1,0 +1,308 @@
+/* ======================================== Variables ======================================== */
+:root {
+    --background: rgb(30, 35, 68);
+    --shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    padding: none;
+}
+
+#parallax {
+    display: block;
+    width: 100%;
+    height:560px;
+    background: url(../images/AboutHead.png) center no-repeat;
+    background-repeat: none;
+    opacity: 35%;
+    
+    transition: 0.3s;
+}
+
+#wrapper {
+    background-color: var(--background);
+}
+
+#abt-header #content {
+    text-align: center;
+    position: relative;
+    top: -200px;
+    color: white;
+    width:70%;
+    margin: 0 auto;
+}
+
+#abt-header h1 {
+    font-size: 65px;
+}
+
+#abt-header p {
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+
+#abt-header a {
+    text-decoration: none;
+    color: white;
+    border: white solid 3px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+#abt-header a:hover {
+    background: white;
+    color: #333;
+    transition: 0.3s;
+}
+
+#group {
+    display: grid;
+    grid-gap: 0px 20px;
+    color: white;
+    /* position: relative;
+    top: -300px; */
+}
+
+#group img {
+    width: 500px;
+    margin: 0 auto;
+    /* position: relative;
+    top: -50px; */
+}
+#group .desc {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    line-height: 2em;
+    padding: 20px;
+}
+#group h2 {
+    font-size: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#group p{
+    font-weight: 700px;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+/* Colin */
+#col{
+    display:grid;
+    grid-template-areas: 
+        "colin-abt desc-col";
+        background: url(../images/abt-profile/colin-bg.png) center no-repeat;
+    /* padding: 40px; */
+}
+#colin-abt {
+    grid-area: colin-abt;
+}
+#desc-col {
+    grid-area: desc-col;
+}
+
+/* Clark */
+#cla{
+    display:grid;
+    grid-template-areas: 
+        "desc-cla clark-abt";
+        background: url(../images/abt-profile/clark-bg.png) center no-repeat;
+    /* padding: 40px; */
+}
+#clark-abt {
+    grid-area: clark-abt;
+}
+#desc-cla {
+    grid-area: desc-cla;
+}
+
+/* Griffin */
+#gri{
+    display:grid;
+    grid-template-areas: 
+        "griffin-abt desc-gri";
+        background: url(../images/abt-profile/griffin-bg.png);
+    /* padding: 40px; */
+}
+#griffin-abt {
+    grid-area: griffin-abt;
+}
+#desc-gri {
+    grid-area: desc-gri;
+}
+
+/* Nathan */
+#nat{
+    display:grid;
+    grid-template-areas: 
+        "desc-nat nathan-abt";
+        background: url(../images/abt-profile/nathan-bg.png) center no-repeat;
+    /* padding: 40px; */
+    color: var(--background);
+}
+#nathan-abt {
+    grid-area: nathan-abt;
+}
+#desc-nat {
+    grid-area: desc-nat;
+}
+
+/* James */
+#jam{
+    display:grid;
+    grid-template-areas: 
+        "james-abt desc-jam";
+    background: url(../images/abt-profile/james-bg.png) center no-repeat;
+    /* padding: 40px; */
+    /* margin-bottom: 40px; */
+}
+#james-abt {
+    grid-area: james-abt;
+}
+#desc-jam {
+    grid-area: desc-jam;
+}
+
+
+@media(max-width:1040px) {
+
+    #abt-header #content{
+        top: -250px;
+    }
+    #abt-header h1{
+        font-size: 40px;;
+    }
+    #abt-header p{
+        font-size: 20px;
+    }
+
+    .desc {
+        max-width: 600px;
+        text-align: center;
+        padding:40px;
+    }
+    #group img {
+        width: 300px;
+    }
+    #group h2{
+        font-size: 40px;
+    }
+    #group p{
+        text-align: left;
+        font-size: 20px;
+        line-height: 1.5em;
+        /* padding: 20px; */
+    }
+    #col {
+        grid-template-areas: 
+            "colin-abt"
+            "desc-col";
+    }
+    #cla {
+        grid-template-areas: 
+            "clark-abt"
+            "desc-cla";
+    }
+    #gri {
+        grid-template-areas: 
+            "griffin-abt"
+            "desc-gri";
+    }
+    #nat {
+        grid-template-areas: 
+            "nathan-abt"
+            "desc-nat";
+    }
+    #jam {
+        grid-template-areas: 
+            "james-abt"
+            "desc-jam";
+    }
+
+    /* #group span {
+        margin: 0 auto;
+        margin-top: 20px;
+    } */
+
+}
+
+@media(max-width: 500px){
+    #abt-header #content {
+        /* top:-100px; */
+        top:0px;
+        margin-bottom: 100px;
+        background: url(../images/AboutHead-mbl.png) no-repeat;
+        width: 100%;
+        transition: 0.3s;
+        margin: 0;
+        padding-top: 40px;
+        padding-bottom: 90px;
+    }
+    #abt-header #parallax {
+        display: none;
+    }   
+    #abt-header p {
+        padding: 20px;
+    }
+
+    #group .desc {
+        padding-top: 0; 
+        padding-bottom: 0;
+    }
+}
+
+#group span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    /* background: green; */
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    border: hidden;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+#group span:hover {
+    transition: 0.3s;
+    border-radius: 0px;
+}
+
+#cla-ul {
+    display: grid;
+    grid-gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+#nat-ul {
+    display: grid;
+    grid-gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+}
+
+.email span {
+    background: url(../images/email.jpg);
+}
+
+.youtube span {
+    background: url(../images/youtube.jpg);
+}
+
+.twitter span {
+    background: url(../images/twitter.jpg);
+}
+
+.instagram span {
+    background: url(../images/instagram.jpg);
+}
+

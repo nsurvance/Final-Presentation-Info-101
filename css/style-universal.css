@@ -54,6 +54,7 @@ body { /* Removes default margins from around the page */
     z-index: 3;
     width:100%;
     box-shadow: var(--shadow);
+    z-index: 10000;
 }
 
 #header ul { /* places the heading tabs and grids them out */
@@ -209,6 +210,7 @@ div#topbar { /* Formats the topbar on subpages */
     background-color: rgb(21, 26, 56);
     transition:0.3s;
     box-shadow: var(--shadow);
+    z-index: 10000;
 }
 
 
